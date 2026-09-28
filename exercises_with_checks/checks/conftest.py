@@ -6,6 +6,7 @@ from pathlib import Path
 
 NOTEBOOKS = {
     "week01": Path(__file__).resolve().parents[1] / "week01" / "knn_checkpoint_opgave.ipynb",
+    "week02": Path(__file__).resolve().parents[1] / "week02" / "svm_checkpoint_opgave.ipynb",
 }
 
 
@@ -37,3 +38,8 @@ def _notebook_namespace(week: str) -> dict:
 @pytest.fixture(scope="session")
 def week01():
     return _notebook_namespace("week01")
+
+
+@pytest.fixture(scope="session")
+def week02():
+    return _notebook_namespace("week02")

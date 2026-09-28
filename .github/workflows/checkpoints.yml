@@ -14,6 +14,9 @@ jobs:
       matrix:
         include:
           - week: week01
+            tests: test_week01_knn.py
+          - week: week02
+            tests: test_week02.py
     steps:
       - uses: actions/checkout@v4
 
@@ -27,4 +30,4 @@ jobs:
           pip install -q pytest nbformat nbclient ipykernel scikit-learn pandas numpy
 
       - name: Run checkpoint ${{ matrix.week }}
-        run: pytest exercises_with_checks/checks/test_${{ matrix.week }}_knn.py -v --tb=short
+        run: pytest exercises_with_checks/checks/${{ matrix.tests }} -v --tb=short
