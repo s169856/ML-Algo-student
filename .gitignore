@@ -219,3 +219,8 @@ __marimo__/
 
 ## hidden files
 *hidden*
+
+# Datasets
+exercises_with_checks/week05/creditcard.csv
+exercises_with_checks/week05/diabetes.csv
+exercises_with_checks/week05/Telco-Customer-Churn.csv
